@@ -24,7 +24,7 @@ export default function MenuBar() {
   return (
     <>
       {/* MOBILE TOP BAR */}
-      <div className="flex lg:hidden items-center justify-end p-3 bg-gray-700 text-white sticky top-0 z-50 shadow-xl">
+      <div className="flex lg:hidden items-center justify-end p-3 bg-white text-black sticky top-0 z-50 shadow-xl">
         <Button
           icon="pi pi-bars"
           className="p-button-text text-white"
