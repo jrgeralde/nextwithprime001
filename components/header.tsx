@@ -24,7 +24,7 @@ export default function MenuBar() {
   return (
     <>
       {/* MOBILE TOP BAR */}
-      <div className="flex md:hidden items-center justify-end p-3 bg-gray-700 text-white sticky top-0 z-50 shadow-xl">
+      <div className="flex lg:hidden items-center justify-end p-3 bg-gray-700 text-white sticky top-0 z-50 shadow-xl">
         <Button
           icon="pi pi-bars"
           className="p-button-text text-white"
@@ -33,10 +33,10 @@ export default function MenuBar() {
       </div>
 
       {/* DESKTOP MENUBAR */}
-      <div className="hidden md:block sticky top-0 z-50 bg-gray-700 shadow-xl">
+      <div className="hidden lg:block sticky top-0 z-50 bg-gray-700 shadow-xl">
         <Menubar
           model={items}
-          className="bg-gray-700 border-none p-3"
+          className="bg-transparent border-none p-3"
         />
       </div>
 
@@ -45,7 +45,8 @@ export default function MenuBar() {
         visible={visible}
         onHide={() => setVisible(false)}
         position="right"
-        className="w-64"
+        className="w-64 bg-gray-700/90 border-l border-gray-600"
+        maskClassName="bg-black/50 backdrop-blur-sm"
       >
         <Menu
           model={items.map(item => ({
@@ -56,7 +57,7 @@ export default function MenuBar() {
             },
             styleClass: 'my-2 px-3 py-2 rounded hover:bg-orange-500',
           }))}
-          className="border-none"
+          className="border-none bg-transparent"
         />
       </Sidebar>
     </>
